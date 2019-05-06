@@ -1,0 +1,75 @@
+body{
+	position: relative;
+}
+
+#wp-hide-show{
+	transition: background 0.3s ease;
+	width: 150px;
+	display: table;
+	background: rgba(255, 145, 0, 0.6);
+	color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	border:none;
+	margin: 5px;
+	cursor: pointer; 
+}
+
+#wp-hide-show:hover{
+	background: rgba(255, 145, 0, 1);
+}
+
+#wp-popup {
+	font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+	max-width: 500px;
+	width: 100%;
+	font-size: 100%;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 99999; 
+	display: none;
+}
+
+#wp-infobox {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 100%;
+	width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px;
+    display: block;
+    background: rgb(255, 255, 255);
+    padding: 6px;
+}
+
+#wp-carry-help-input{
+	width: 400px;
+	min-height: 375px;
+	margin: 5px;
+	font-size: 11px;
+}
+
+#wp-startFiller{
+	width: 150px;
+	display: table;
+	background: #ff9100;
+	color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	border:none;
+	margin: 5px;
+	cursor: pointer;
+}
+
+#wp-startFiller:hover{
+	background: #d07700;
+}
+

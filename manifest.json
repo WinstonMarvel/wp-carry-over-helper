@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "WP Carry Filler",
+  "description": "This extension assists in filling in the FindLaw carry over plugin for WP",
+  "version": "1.0",
+
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "WP Carry Filler"
+   },
+   "icons":{
+      "128": "icon128.png" 
+   },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "popup-style.css" ],
+      "js": [ "jquery.js", "handler.js" ],
+      "matches": ["http://*.com/*", "https://*.com/*"]
+   } ]
+}
