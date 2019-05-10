@@ -10,6 +10,18 @@ var lines;
 	$("#wp-hide-show").on('click', function(){
 			$("#wp-infobox").fadeToggle();
 	});
+
+	function titleFilter(ur) {
+	    var filUrl = ur.replace('.shtml', "").split("/");
+	    var title = filUrl[filUrl.length - 1];
+	    title = title.split("-");
+	    var capitalize = [];
+	    for (var j = 0; j < title.length; j++) {
+	        capitalize.push(title[j].charAt(0).toUpperCase() + title[j].slice(1));
+	    }
+	    return capitalize;
+	}
+	
 	function fillLines() { 
 		lines = $("#wp-carry-help-input").val().split("\n");
 		lines.map((line)=>{
