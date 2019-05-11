@@ -12,20 +12,22 @@ var lines;
 	});
 
 	function titleFilter(ur) {
-	    var filUrl = ur.replace('.shtml', "").split("/");
-	    var title = filUrl[filUrl.length - 1];
+	    var filUrl = ur.replace('.shtml', "/").split("/");
+	    var title = filUrl[filUrl.length - 2];
 	    title = title.split("-");
 	    var capitalize = [];
 	    for (var j = 0; j < title.length; j++) {
 	        capitalize.push(title[j].charAt(0).toUpperCase() + title[j].slice(1));
 	    }
-	    return capitalize;
+	    return capitalize.join(" ");
 	}
 	
 	function fillLines() { 
 		lines = $("#wp-carry-help-input").val().split("\n");
+
 		lines.map((line)=>{
 			document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-bulk-row-field-wrap input").value = line;
+			document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-checkbox-label .flco-bulk-row-field-wrap input").value = titleFilter(line);
 			document.querySelector("a.flco-add").click();
 		});
 	}
