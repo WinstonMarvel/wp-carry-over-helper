@@ -1,4 +1,4 @@
-var popupcode = '<div id="wp-popup"><button id="wp-hide-show">WP Carry Help</button><div id="wp-infobox"><div><strong>WP carry over filler</strong> </br>To ensure that this plugin works:<ol><li>Paste the links into the box</li><li>Hit start to fill up the data </li></ol></div><label>Select the choice</label> <br><input type="radio" name="title" value="Blog-Title" id="showBlog">Blog-Title<br><input type="radio" name="title" value="Page-Title" id="showTitle">Page-Title<br><input type="text" id="uname" name="name" placeholder="Enter the page title"><br><textarea id="wp-carry-help-input"></textarea><button id="wp-startFiller" style="display:none">Fetch URL for Blog</button><button id="fetch-title" style="display:none">Fetch URL for Title</button></div></div>';
+var popupcode = '<div id="wp-popup"><button id="wp-hide-show">WP Carry Help</button><div id="wp-infobox"><div><strong>WP carry over filler</strong> </br>To ensure that this plugin works:<ol><li>Paste the links into the box</li><li>Hit start to fill up the data </li></ol></div><label>Select the choice</label> <br><input type="radio" name="title" value="Blog-Title" id="showBlog">Blog-Title<br><input type="radio" name="title" value="Page-Title" id="showTitle">Page-Title<br><input type="text" id="uname" name="name" placeholder="Enter the Content Id"><br><textarea id="wp-carry-help-input"></textarea><button id="wp-startFiller" style="display:none">Fetch URL for Blog</button><button id="fetch-title" style="display:none">Fetch URL for Title</button></div></div>';
 
 
 var lines;
@@ -62,6 +62,9 @@ var lines;
 		lines = $("#wp-carry-help-input").val().split("\n");
 		var pageTitle = document.querySelector("#uname").value;
 		lines.map((line) => {
+			// document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-new-post-type .flco-checkbox").classList.remove("on");
+			// document.querySelector("a.flco-add").click();
+			document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-new-post-type .flco-checkbox:last-child input").click();
 			document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-bulk-row-field-wrap input").value = line;
 			document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-bulk-row-field-wrap input[name=flco_content_id]").value = pageTitle;
 			document.querySelector(".flco-bulk-form-wrap .flco-bulk-row:last-child .flco-checkbox-label .flco-bulk-row-field-wrap input").value = titleFilter(line);
