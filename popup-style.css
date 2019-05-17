@@ -53,8 +53,8 @@ body{
 	font-size: 11px;
 }
 
-#wp-startFiller{
-	width: 150px;
+#wp-startFiller, #fetch-title{
+	width: 180px;
 	display: table;
 	background: #ff9100;
 	color: #fff;
@@ -69,7 +69,7 @@ body{
 	cursor: pointer;
 }
 
-#wp-startFiller:hover{
+#wp-startFiller:hover, #fetch-title:hover {
 	background: #d07700;
 }
 

@@ -21,6 +21,6 @@
       "all_frames": true,
       "css": [ "popup-style.css" ],
       "js": [ "jquery.js", "handler.js" ],
-      "matches": ["http://*.com/*", "https://*.com/*"]
+      "matches": ["http://*.com/*page=flco-carry-over*", "https://*.com/*page=flco-carry-over*"]
    } ]
 }
