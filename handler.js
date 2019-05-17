@@ -1,6 +1,5 @@
 var popupcode = '<div id="wp-popup"><button id="wp-hide-show">WP Carry Help</button><div id="wp-infobox"><div><strong>WP carry over filler</strong> </br>To ensure that this plugin works:<ol><li>Paste the links into the box</li><li>If pages are selected instead of blog, then make sure you provide a content ID </li><li>Hit start to fill up the data </li></ol></div><label><strong>Choose carryover type:</strong></label> <br><input type="radio" name="title" value="Blog-Title" id="showBlog">Blog Post<br><input type="radio" name="title" value="Page-Title" id="showTitle">Internal Page<br><input type="text" id="uname" name="name" placeholder="Enter the content ID"><br><textarea id="wp-carry-help-input"></textarea><button id="wp-startFiller" style="display:none">Fetch URLs for Blog</button><button id="fetch-title" style="display:none">Fetch URLs for Pages</button></div></div>';
 
-
 var lines;
 (function () {
 	if ($(".flco-bulk-submit").length) {
