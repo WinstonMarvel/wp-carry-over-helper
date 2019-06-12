@@ -40,9 +40,11 @@ var lines;
 	function titleFilter(ur) {
 		var extention = {
 			".shtml": "/",
-			".html": "/"
+			".html": "/",
+			".cfm": "/",
+			".cfml": "/"
 		};
-		var filUrl = ur.replace(/\.shtml|\.html/gi, function (matched) {
+		var filUrl = ur.replace(/\.shtml|\.html|\.cfm|\.cfml/gi, function (matched) {
 			return extention[matched];
 		}).split("/");
 		var title = filUrl[filUrl.length - 2];
