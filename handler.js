@@ -38,7 +38,13 @@ var lines;
 
 	// Code for title that comes from last slug of the URL
 	function titleFilter(ur) {
-		var filUrl = ur.replace('.shtml', "/").split("/");
+		var extention = {
+			".shtml": "/",
+			".html": "/"
+		};
+		var filUrl = ur.replace(/\.shtml|\.html/gi, function (matched) {
+			return extention[matched];
+		}).split("/");
 		var title = filUrl[filUrl.length - 2];
 		title = title.split("-");
 		var capitalize = [];
@@ -72,4 +78,3 @@ var lines;
 		});
 	}
 })();
-
