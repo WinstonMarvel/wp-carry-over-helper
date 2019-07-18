@@ -45,7 +45,7 @@ var lines;
 		};
 		var filUrl = ur.replace(/\.shtml|\.html|\.cfm|\.cfml/gi, function (matched) {
 			return extention[matched];
-		}).split("/");
+		}).replace(/[0-9]*/gi, "").split("/");
 		var title = filUrl[filUrl.length - 2];
 		title = title.split("-");
 		var capitalize = [];
